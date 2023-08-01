@@ -35,6 +35,8 @@ class TabbarController: UITabBarController {
         habitsNavController.tabBarItem = item1
         infoNavController.tabBarItem = item2
         
+        UITabBar.appearance().tintColor = UIColor(red: 161/255.0, green: 22/255.0, blue: 204/255.0, alpha: 1.0)
+        
     }
     
     
