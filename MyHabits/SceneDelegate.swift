@@ -1,9 +1,7 @@
 //
 //  SceneDelegate.swift
 //  MyHabits
-//
-//  Created by Мамуля on 30.07.2023.
-//
+
 
 import UIKit
 

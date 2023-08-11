@@ -16,6 +16,8 @@ public final class Habit: Codable {
     /// Даты выполнения привычки.
     public var trackDates: [Date]
     
+    public var id: UUID
+    
     /// Цвет привычки для выделения в списке.
     public var color: UIColor {
         get {
@@ -62,6 +64,7 @@ public final class Habit: Codable {
     private lazy var calendar: Calendar = .current
     
     public init(name: String, date: Date, trackDates: [Date] = [], color: UIColor) {
+        self.id = UUID.init()
         self.name = name
         self.date = date
         self.trackDates = trackDates
@@ -175,6 +178,23 @@ public final class HabitsStore {
         habit.trackDates.contains { trackDate in
             calendar.isDate(date, equalTo: trackDate, toGranularity: .day)
         }
+    }
+    
+    // MARK: - Public
+    
+    func fetchHabits(completion: ()->()) {
+        
+        guard let data = userDefaults.data(forKey: "habits") else {
+            return
+        }
+        do {
+            habits = try decoder.decode([Habit].self, from: data)
+            completion()
+        }
+        catch {
+            print("Ошибка декодирования сохранённых привычек", error)
+        }
+        
     }
     
     // MARK: - Private
