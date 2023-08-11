@@ -7,6 +7,7 @@ import UIKit
 
 class SplashScreenController: UIViewController {
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,5 +21,7 @@ class SplashScreenController: UIViewController {
                 self.navigationController?.pushViewController(viewController, animated: true)
         }
     }
+    
+    
     
 }

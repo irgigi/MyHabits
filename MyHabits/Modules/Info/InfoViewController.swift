@@ -115,8 +115,8 @@ class InfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Информация"
-        let color = UIColor(red: 242/255.0, green: 242/255.0, blue: 247/255.0, alpha: 1.0)
-        view.backgroundColor = color
+        // UIColor(red: 242/255.0, green: 242/255.0, blue: 247/255.0, alpha: 1.0)
+        view.backgroundColor = myColorGray
         view.addSubview(scrollView)
         
         addSubViews()
