@@ -10,6 +10,8 @@ class HabitCollectionViewCell: UICollectionViewCell {
     var habit: Habit?
     var progressCell: ProgressCollectionViewCell?
     
+
+    
     //MARK: - Elements
     
     private var nameLabel: UILabel = {

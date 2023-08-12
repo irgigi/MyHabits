@@ -157,6 +157,7 @@ class InfoViewController: UIViewController {
             scrollView.leadingAnchor.constraint(equalTo: safeAreaGuide.leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: safeAreaGuide.trailingAnchor),
             scrollView.bottomAnchor.constraint(equalTo: safeAreaGuide.bottomAnchor),
+            scrollView.centerXAnchor.constraint(equalTo: safeAreaGuide.centerXAnchor),
             
             contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
             contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 20),

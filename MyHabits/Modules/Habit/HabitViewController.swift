@@ -16,19 +16,19 @@ class HabitViewController: UIViewController {
     var topView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = UIColor(red: 242/255, green: 242/255, blue: 247/255, alpha: 1.0)
+        view.backgroundColor = myColorGray
         return view
     }()
     
     lazy var cancelBarButton: UIBarButtonItem = {
         let button = UIBarButtonItem(title: "Отмена", style: .plain, target: self, action: #selector(cancelButtonTapped))
-        button.tintColor = UIColor(red: 161/255, green: 22/255, blue: 204/255, alpha: 1.0)
+        button.tintColor = myColorPurpl
         return button
     }()
     
     lazy var saveBarButton: UIBarButtonItem = {
         let button = UIBarButtonItem(title: "Сохранить", style: .plain, target: self, action: #selector(saveButtonTapped))
-        button.tintColor = UIColor(red: 161/255, green: 22/255, blue: 204/255, alpha: 1.0)
+        button.tintColor = myColorPurpl
         
         return button
     }()
@@ -94,7 +94,7 @@ class HabitViewController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 15
         view.clipsToBounds = true
-        view.backgroundColor = UIColor(red: 255/255, green: 159/255, blue: 79/255, alpha: 1)
+        view.backgroundColor = myColorOrange
         view.isUserInteractionEnabled = true
         return view
     }()
@@ -129,7 +129,7 @@ class HabitViewController: UIViewController {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.text = "1:00 AM"
-        textField.textColor = UIColor(red: 161/255, green: 22/255, blue: 204/255, alpha: 1.0)
+        textField.textColor = myColorPurpl
         textField.borderStyle = .roundedRect
         textField.isUserInteractionEnabled = false
         return textField

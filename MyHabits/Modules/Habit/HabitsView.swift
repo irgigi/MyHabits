@@ -11,6 +11,7 @@ class HabitsView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.preferredFont(forTextStyle: .largeTitle)
+        //label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         label.text = "Сегодня"
         return label
     }()
@@ -50,7 +51,6 @@ class HabitsView: UIView {
             titleLabel.widthAnchor.constraint(equalTo: viewContent.widthAnchor),
             titleLabel.trailingAnchor.constraint(equalTo: viewContent.trailingAnchor, constant: -20),
             titleLabel.topAnchor.constraint(equalTo: viewContent.topAnchor, constant: 20),
-            //titleLabel.heightAnchor.constraint(equalToConstant: 200)
         ])
     }
     

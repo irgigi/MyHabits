@@ -58,6 +58,9 @@ class HabitsViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        
+        
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
@@ -108,6 +111,7 @@ class HabitsViewController: UIViewController, UICollectionViewDataSource, UIColl
         
         if indexPath.section == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellReuseID.custom.rawValue, for: indexPath) as! HabitCollectionViewCell
+            
             let habit = HabitsStore.shared.habits[indexPath.row]
             cell.update(with: habit, progressCell: progressCell)
             return cell
@@ -141,8 +145,6 @@ class HabitsViewController: UIViewController, UICollectionViewDataSource, UIColl
             collectionView.trailingAnchor.constraint(equalTo: safeAreaGuide.trailingAnchor),
             collectionView.topAnchor.constraint(equalTo: safeAreaGuide.topAnchor, constant: 50),
             collectionView.bottomAnchor.constraint(equalTo: safeAreaGuide.bottomAnchor),
-            
-            //collectionView.centerXAnchor.constraint(equalTo: safeAreaGuide.centerXAnchor)
            
         ])
         
